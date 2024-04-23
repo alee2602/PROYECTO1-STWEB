@@ -23,7 +23,7 @@
         background: rgb(242,234,211);
         background: linear-gradient(0deg, rgba(242,234,211,1) 0%, rgba(223,215,191,1) 100%);
         }
-            /* Header */
+        /* Header */
         header {
             background-color: #000000;
             color: #816C3F;
@@ -118,75 +118,75 @@
             font-size: 0.8em; 
             font-family: "Adamina", serif;
         }
-            /* Container para la imagen */
-            .postImageContainer {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 15px; 
-            }
-            /* Imagen del post */
-            .postImage {
-                max-height: 210px;
-                margin-top: 10px;
-                width: auto;
-                border-radius: 8px;
-            }
-            /* Título del post */
-            .postTitle {
-                font-size: 1.5em;
-                color: #333333;
-                margin: 0;
-                text-align: center;
-                font-family: 'Oswald', sans-serif;
-                font-weight: bold;
-            }
-            /* Componente de carga */
-            .loading {
-                text-align: center;
-                padding: 50px;
-                color: black;
-            }
-            /* Errores */
-            .error{
-                text-align: center;
-                padding: 50px;
-                color:red;
-            }
-            /* Estado vacío cuando no hay posts */
-            .emptyState {
+        /* Container para la imagen */
+        .postImageContainer {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px; 
+        }
+        /* Imagen del post */
+        .postImage {
+            max-height: 210px;
+            margin-top: 10px;
+            width: auto;
+            border-radius: 8px;
+        }
+        /* Título del post */
+        .postTitle {
+            font-size: 1.5em;
+            color: #333333;
+            margin: 0;
+            text-align: center;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+        }
+        /* Componente de carga */
+        .loading {
             text-align: center;
             padding: 50px;
-            color: #000000;
-            }
-
-            /* Media queries para adaptar estilos en dispositivos móviles */
-            @media (max-width: 768px) {
-            .container { /* Una sola columna */
-                grid-template-columns: 1fr;
-            }
-
-            .header-content{ /* Distribuir el contenido del header en todo el espacio */
-                justify-content: space-between; 
-            }
-
-            .logo{ /* Ajustar el ancho del logo */
-                width: 100px;
-            }
-
-            header, .footer, .loading, .error { /* Cambiar el tamaño del font para estos elementos */
-                font-size: 24px;
-            }
-
-            .header-content, .post { /* Ajustar los márgenes y el padding */
-                margin: 5px;
-                padding: 10px;
-            }
-
-            .postImage { /* Cambiar la altura máxima de las imágenes de cada post */
-                max-height: 180px;
-                margin-top: 20px;
-            }
+            color: black;
         }
+        /* Errores */
+        .error{
+            text-align: center;
+            padding: 50px;
+            color:red;
+        }
+        /* Estado vacío cuando no hay posts */
+        .emptyState {
+        text-align: center;
+        padding: 50px;
+        color: #000000;
+        }
+
+        /* Media queries para adaptar estilos en dispositivos móviles */
+        @media (max-width: 768px) {
+        .container { /* Una sola columna */
+            grid-template-columns: 1fr;
+        }
+
+        .header-content{ /* Distribuir el contenido del header en todo el espacio */
+            justify-content: space-between; 
+        }
+
+        .logo{ /* Ajustar el ancho del logo */
+            width: 100px;
+        }
+
+        header, .footer, .loading, .error { /* Cambiar el tamaño del font para estos elementos */
+            font-size: 24px;
+        }
+
+        .header-content, .post { /* Ajustar los márgenes y el padding */
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .postImage { /* Cambiar la altura máxima de las imágenes de cada post */
+            max-height: 180px;
+            margin-top: 20px;
+        }
+    }
     </style>
     </head>
 <body>
