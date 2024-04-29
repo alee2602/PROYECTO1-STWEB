@@ -1,7 +1,8 @@
 import useNavigate from "@hooks/useNavigate"
 import useToken from "@hooks/useToken"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimney, faGripVertical, faRightFromBracket, faRightToBracket } from '@fortawesome/free-solid-svg-icons';
+import { faHouseChimney, faGripVertical, faRightFromBracket, faRightToBracket, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import '@styles/App.css'
 
 const Nav = () => {
     const { navigate} = useNavigate();
@@ -25,7 +26,10 @@ const Nav = () => {
                         <a href="#/logout" onClick={() => navigate('/logout')} className="nav-link"> <FontAwesomeIcon icon={faRightFromBracket} className="fa-icon"/> LOGOUT</a>
                     </>
                 ) : (
+                    <>
                     <a href="#/login" onClick={() => navigate('/login')} className="nav-link"> <FontAwesomeIcon icon={faRightToBracket} className="fa-icon" />LOGIN</a>
+                    <a href="#/register" onClick={() => navigate('/register')} className="nav-link"> <FontAwesomeIcon icon={faFileLines} className="fa-icon" />REGISTER</a>
+                    </>
                 )
             }
         </nav>

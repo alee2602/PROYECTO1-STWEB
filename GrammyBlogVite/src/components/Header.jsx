@@ -1,5 +1,5 @@
 import logo from '../assets/logo.png'
-import '../App.css';
+import '@styles/App.css';
 
 function Header(props) {
     return(

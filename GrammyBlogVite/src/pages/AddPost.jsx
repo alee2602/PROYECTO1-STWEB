@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import useNavigate from '@hooks/useNavigate'; 
+import '@styles/AddPost.css'; 
 
-function AddPost({ onAdd }) {
+function AddPost() {
     const [postData, setPostData] = useState({
         title: '',
         category: '',
@@ -12,6 +14,8 @@ function AddPost({ onAdd }) {
         content: ''
     });
 
+    const { navigate } = useNavigate(); 
+
     const handleChange = (e) => {
         const { name, value } = e.target;
         setPostData(prevData => ({
@@ -20,26 +24,39 @@ function AddPost({ onAdd }) {
         }));
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (await onAdd(postData)) {
-            setPostData({
-                title: '',
-                category: '',
-                winner_name: '',
-                song_album_name: '',
-                record_label: '',
-                award_date: '',
-                image_url: '',
-                content: ''
+    const handleAddPost = async () => {
+        try {
+            const response = await fetch('http://localhost:22249/posts', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(postData),
             });
-        } else {
-            alert('Error adding post');
+
+            if (!response.ok) {
+                throw new Error('Failed to add post');
+            }
+
+            const data = await response.json();
+            console.log(data); 
+
+            navigate('/'); 
+            window.location.replace('#/admin');
+            return true; 
+        } catch (error) {
+            console.error('Error:', error);
+            return false; 
         }
     };
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        await handleAddPost(); 
+    };
+
     return (
-        <div>
+        <div className="add-post-container">
             <h2>Add Post</h2>
             <form onSubmit={handleSubmit}>
                 <input name="title" type="text" placeholder="Título" value={postData.title} onChange={handleChange} />

@@ -1,4 +1,4 @@
-import '../App.css';
+import '@styles/App.css';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';

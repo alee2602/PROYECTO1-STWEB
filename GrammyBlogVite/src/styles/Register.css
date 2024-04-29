@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 .main-container{
-    padding: 30px;
+    padding: 40px;
 }
 
-.login-container {
+.register-container {
     background-color: #ffffff;
     width: 400px; 
     padding: 50px; 
@@ -13,14 +13,15 @@
     margin: auto;
 }
 
-.login-form h1{
+.register-form h1{
     text-align: center;
     margin-bottom: 30px;
     font-family: 'Poppins', 'sans-serif';
 }
 
-.login-form input[type="text"],
-.login-form input[type="password"]{
+.register-form input[type="text"],
+.register-form input[type="email"],
+.register-form input[type="password"]{
     width: calc(100% - 20px); 
     padding: 15px;
     margin: 10px 0;
@@ -30,7 +31,7 @@
     font-family: 'Poppins', 'sans-serif';
 }
 
-.login-form button {
+.register-form button {
     width: 100%;
     padding: 15px;
     border: none;
@@ -42,16 +43,16 @@
     font-family: 'Poppins', 'sans-serif';
 }
 
-.login-form button:hover {
+.register-form button:hover {
     background-color: burlywood;
 }
 
-.login-form p{
+.register-form p{
     text-align: center;
     font-family: 'Poppins', 'sans-serif';
 }
 
-.login-form a{
+.register-form a{
     color:rgb(232, 168, 17)
 }
 
@@ -67,9 +68,8 @@
     cursor: pointer; 
 }
 
-.error-message{
+.error-output{
     text-align: center;
     padding: 50px;
     color:red;
 }
-

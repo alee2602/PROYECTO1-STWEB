@@ -1,0 +1,46 @@
+.add-post-container {
+    max-width: 600px; /* Limita el ancho del formulario */
+    margin: 40px auto; /* Centra el formulario */
+    padding: 2rem;
+    background-color: #fff; /* Fondo blanco con una sombra para destacarlo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.add-post-container h2 {
+    text-align: center;
+    color: #333;
+}
+
+.add-post-container form {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+.add-post-container input,
+.add-post-container textarea {
+    width: 100%; /* Llena el ancho del contenedor */
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-post-container button {
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-post-container button:hover {
+    background-color: #0056b3; /* Un tono más oscuro al pasar el cursor */
+}
+
+@media (max-width: 768px) {
+    .add-post-container {
+        padding: 1rem; /* Menos padding en móviles */
+    }
+}

@@ -14,7 +14,7 @@ const NavigationProvider = ({ children }) => {
     }, [path])
 
     const navigate = (url) => {
-        console.log('Pagina actual', url)
+        console.log('Current Page', url)
         setPage(url)
     }
 

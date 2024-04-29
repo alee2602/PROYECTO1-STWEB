@@ -1,4 +1,6 @@
- /* Fuente personalizada desde archivo local */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Fuente personalizada desde archivo local */
 @font-face{
   font-family: 'Newsreader';
   src: url('./assets/Newsreader-Italic-VariableFont_opsz\,wght.ttf') (format('truetype'));
@@ -32,18 +34,18 @@ nav {
   justify-content: space-around; 
   align-items: center;
   width: auto;
-  padding: 0 10px; 
-  background-color: #816C3F;
-  font-family: "Adamina", serif;
+  padding: 10px 15px; 
+  background-color: #A78222;
+  font-family: 'Poppins', 'sans-serif';
 }
 
 /* Nav Links */
 nav a {
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
   padding: 5px 15px;
-  font-weight: normal; 
-  font-size: 1.2rem; 
+  font-weight: 600; 
+  font-size: 1.3rem; 
 }
 
 .nav-link {
@@ -56,7 +58,7 @@ nav a {
 }
 
 nav a:hover {
-  color: #E3DBC3; 
+  color: #61481C; 
   font-weight: bold;
 }
 

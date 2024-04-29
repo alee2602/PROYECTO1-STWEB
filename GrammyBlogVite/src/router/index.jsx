@@ -6,10 +6,10 @@ import Admin from '@pages/Admin'
 import AddPost from '@pages/AddPost'
 import UpdatePost from '@pages/UpdatePost'
 import DeletePost from '@pages/DeletePost'
+import Register from '@pages/Register'
 import Logout from '@pages/Logout'
 import useToken from '@hooks/useToken'
-
-import '../App.css'
+import '@styles/App.css'
 
 const routes = {
 
@@ -40,6 +40,10 @@ const routes = {
     '/logout': {
         component: Logout,
         isProtected: false 
+    },
+    '/register': {
+        component: Register,
+        isProtected: false
     }
 
 }

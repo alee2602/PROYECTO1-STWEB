@@ -9,7 +9,8 @@ export default defineConfig({
       '@pages': '/src/pages',
       '@components': '/src/components',
       '@hooks': '/src/hooks',
-      '@styles': '/src/styles'
+      '@styles': '/src/styles',
+      '@utils': '/src/utils'
     }
   }
 })
