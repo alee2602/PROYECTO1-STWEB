@@ -92,8 +92,10 @@ function UpdatePostForm({ postId, onPostUpdated, isActive }) {
                 throw new Error('Failed to update post');
             }
 
-            onPostUpdated(); 
-            navigate('/'); 
+            onPostUpdated()
+            navigate('/')
+            window.location.replace('#/')
+
         } catch (error) {
             console.error('Error:', error);
             alert('Failed to update post: ' + error.message);
