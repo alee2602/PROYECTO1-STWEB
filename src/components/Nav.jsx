@@ -1,18 +1,17 @@
 import useNavigate from "@hooks/useNavigate"
 import useToken from "@hooks/useToken"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouseChimney, faGripVertical, faRightFromBracket, faRightToBracket, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { faHouseChimney, faGripVertical, faRightFromBracket, faRightToBracket, faFileLines, faUser } from '@fortawesome/free-solid-svg-icons';
 import '@styles/App.css'
 
 const Nav = () => {
     const { navigate} = useNavigate();
     const { isLoggedIn, decodedToken } = useToken();
 
-    //let rawToken = {}
-    //if (isLoggedIn) {
-        // = (decodedToken)
-        //console.log(decodedToken)
-    //}
+    let rawToken = {}
+    if (isLoggedIn) {
+        rawToken = decodedToken()
+    }
 
 
     return (
@@ -24,6 +23,7 @@ const Nav = () => {
                     <>
                         <a href="#/admin" onClick={() => navigate('/admin')} className="nav-link"> <FontAwesomeIcon icon={faGripVertical} className="fa-icon" /> BLOG CRUD DASHBOARD</a> 
                         <a href="#/logout" onClick={() => navigate('/logout')} className="nav-link"> <FontAwesomeIcon icon={faRightFromBracket} className="fa-icon"/> LOGOUT</a>
+                        <span className="nav-link"><FontAwesomeIcon icon={faUser} className="fa-icon" /> {rawToken.name}</span>
                     </>
                 ) : (
                     <>

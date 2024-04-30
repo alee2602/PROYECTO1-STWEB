@@ -7,21 +7,22 @@ import { faPlus, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-i
 const NavCrud = () => {
     const { navigate } = useNavigate();
 
-    const handleCardClick = (path) => {
+    const handleCardClick = (path, e) => {
+        e.preventDefault();
         navigate(path);
     };
 
     return (
         <div className="admin-dashboard">
-            <div className="card" onClick={() => handleCardClick('/add-post')}>
+            <div className="card" onClick={(e) => handleCardClick('/add-post', e)}>
             <FontAwesomeIcon icon={faPlus} className="fa-icon" />
                 <h3>Add New Post</h3>
             </div>
-            <div className="card" onClick={() => handleCardClick('/update-post')}>
+            <div className="card" onClick={(e) => handleCardClick('/update-post', e)}>
             <FontAwesomeIcon icon={faPenToSquare} className="fa-icon"  />
                 <h3>Update Post</h3>
             </div>
-            <div className="card" onClick={() => handleCardClick('/delete-post')}>
+            <div className="card" onClick={(e) => handleCardClick('/delete-post', e)}>
             <FontAwesomeIcon icon={faTrashCan} className="fa-icon" />
                 <h3>Delete Post</h3>
             </div>

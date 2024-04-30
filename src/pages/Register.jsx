@@ -48,7 +48,7 @@ const handleSubmit = async (event) => {
 };
 
 return (
-    <div className='main-container'>
+    <div className='main-register-container'>
         <div className="register-container">
             <div className="register-form">
                 <h1>Register</h1>

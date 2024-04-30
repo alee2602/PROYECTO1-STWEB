@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* Fuente personalizada desde archivo local */
+@font-face{
+    font-family: 'Newsreader';
+    src: url('./assets/Newsreader-Italic-VariableFont_opsz\,wght.ttf') (format('truetype'));
+}
 
 .delete-posts-container {
     display: flex;
@@ -14,7 +20,8 @@
 
 .delete-post-details h2 {
     font-size: 28px;
-    color: #333;
+    color: #333333;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .delete-posts-list {
@@ -36,14 +43,18 @@
 
 .delete-post-title {
     font-size: 24px;
-    color: #333;
+    color: #333333;
     margin-bottom: 10px;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 .delete-post-content {
+    text-align: justify;
     font-size: 16px;
-    color: #666;
+    color: #666666;
     margin-bottom: 20px;
+    font-family: "Adamina", serif;
 }
 
 .delete-button {
@@ -54,8 +65,109 @@
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    display: block; 
+    margin: 20px auto 0; 
+    text-align: center; 
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .delete-button:hover {
     background-color: #cc0000;
+}
+
+.delete-post-image{
+    max-width: 50%; 
+    height: auto; 
+    display: block; 
+    margin: 0 auto;
+    margin-bottom: 10px; 
+}
+
+@media (max-width: 992px) {
+    .delete-posts-container {
+        padding: 20px;
+    }
+
+    .delete-posts-list {
+        width: 90%;
+    }
+
+    .delete-post-item {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .delete-post-title {
+        font-size: 20px;
+    }
+
+    .delete-post-content {
+        font-size: 14px;
+    }
+
+    .delete-button {
+        padding: 8px 16px;
+    }
+
+    .delete-post-image {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .delete-posts-container {
+        padding: 10px;
+    }
+
+    .delete-posts-list {
+        width: 100%;
+    }
+
+    .delete-post-item {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .delete-post-title {
+        font-size: 18px;
+    }
+
+    .delete-post-content {
+        font-size: 13px;
+    }
+
+    .delete-button {
+        padding: 6px 14px;
+    }
+
+    .delete-post-image {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .delete-posts-container {
+        margin-top: 10px;
+    }
+
+    .delete-post-details h2 {
+        font-size: 24px;
+    }
+
+    .delete-post-title {
+        font-size: 16px;
+    }
+
+    .delete-post-content {
+        font-size: 12px;
+    }
+
+    .delete-button {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .delete-post-image {
+        max-width: 90%;
+    }
 }

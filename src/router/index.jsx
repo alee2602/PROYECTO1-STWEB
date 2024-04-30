@@ -63,7 +63,7 @@ function Router() {
     }
 
     if (page == "/logout") {
-        window.location.replace("/");
+        window.location.replace("#/login");
     }
 
     return (

@@ -3,6 +3,8 @@ import useNavigate from '@hooks/useNavigate';
 import '@styles/UpdatePost.css'; 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import { fetchWithAuth } from '@utils/api.js';
+
 
 function UpdatePost() {
     const [posts, setPosts] = useState([]);
@@ -44,7 +46,14 @@ function UpdatePost() {
 
 function UpdatePostForm({ postId, onPostUpdated, isActive }) {
     const [postData, setPostData] = useState({
-        title: ''
+        title: '',
+        category: '',
+        winner_name: '',
+        song_album_name: '',
+        record_label: '',
+        award_date: '',
+        image_url: '',
+        content: ''
     });
 
     const { navigate } = useNavigate();
@@ -80,23 +89,21 @@ function UpdatePostForm({ postId, onPostUpdated, isActive }) {
         };
 
         try {
-            const response = await fetch(`http://localhost:22249/posts/${postId}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(updatedPostData),
-            });
-
-            if (!response.ok) {
-                throw new Error('Failed to update post');
-            }
+            const response = await fetchWithAuth(`http://localhost:22249/posts/${postId}`, 'PUT', updatedPostData)
 
             onPostUpdated()
+            alert('Post has been updated successfully ! ');
             navigate('/')
             window.location.replace('#/')
 
         } catch (error) {
+                if (error.message.includes('Token is expired :(')) {
+                    // Si el token está expirado, redirigir al usuario a la página de login
+                    alert('Your session has timed out, please log in! ');
+                    navigate('/logout')
+                    window.location.replace('#/logout')
+                    return;
+                }
             console.error('Error:', error);
             alert('Failed to update post: ' + error.message);
         }

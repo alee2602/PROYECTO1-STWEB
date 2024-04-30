@@ -17,6 +17,7 @@
     width: 20%;
     padding: 10px; 
     text-align: center;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .posts-list {
@@ -36,7 +37,7 @@
     border-bottom: 1px solid #ccc;
     background-color: #FFFFFF;
     border-radius: 8px;
-    border: 3px solid #816C3F;
+    border: 2px solid #24180C;
 }
 
 .post-title {
@@ -44,19 +45,20 @@
     font-weight: 500;
     color: #333;
     margin: 5px 5px;
-    align-self: center;
-    font-family: 'Poppins', 'sans-serif';
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
 }
 
 
 .post-item.active {
     background-color: #F2F1EB; 
-}
+    border: 3.9px solid #5C300D
+}   
 
 .edit-button {
     padding: 8px 25px;
     margin-top: 20px;
-    background-color: #007BFF;
+    background-color: #8D612A;
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,7 +69,7 @@
 }
 
 .edit-button:hover {
-    background-color: #0056b3;
+    background-color: #BE9235;
 }
 
 .form-heading {
@@ -111,29 +113,30 @@
 .textarea-field {
     height: 120px; 
     padding: 12px; 
-    border: 1px solid #ccc; 
+    border: 1px solid #cccccc; 
     border-radius: 4px; 
     margin-bottom: 20px; 
     box-sizing: border-box; 
     resize: none; 
     font-size: 1rem; 
+    text-align: justify;
 }
 
 .update-post-container button {
     width: 100%;
     padding: 10px 0; 
     margin-top: 10px;
-    background-color: #007bff; 
-    border: none;
+    background-color: #754027; 
     color: white;
     border-radius: 4px;
     cursor: pointer;
     font-size: 1rem; 
     transition: background-color 0.3s;
+    font-family: 'Poppins', 'sans-serif';
 }
 
 .update-post-container button:hover {
-    background-color: #0056b3; 
+    background-color: #BE9235; 
 }
 
 .update-post-container.active {
@@ -157,8 +160,137 @@ label {
     font-weight: bold; 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+    .update-container {
+        flex-direction: column; 
+        align-items: center; 
+        padding: 10px; 
+    }
+
+    .edit-post-details, .update-post-container {
+        width: 90%; 
+        position: static; 
+        margin: 10px 0; 
+    }
+
+    .posts-list {
+        width: 100%; 
+    }
+
+    .post-item {
+        flex-direction: row; 
+        align-items: center; 
+        justify-content: space-between; 
+    }
+
+    .post-title {
+        font-size: 16px; 
+    }
+
+    .edit-button {
+        margin-top: 0; 
+    }
+
     .update-post-container {
+        transform: translate(0%, 0%); 
+        padding: 1rem; 
+    }
+
+    .textarea-field {
+        height: 100px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .update-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .edit-post-details, .update-post-container {
         width: 100%;
+        margin-top: 10px;
+        position: static;
+        padding: 10px;
+    }
+
+    .posts-list {
+        width: 100%;
+    }
+
+    .post-item {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .post-title {
+        font-size: 16px;
+    }
+
+    .edit-button {
+        width: auto;
+        padding: 10px 20px;
+    }
+
+    .update-post-container {
+        transform: none;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .textarea-field {
+        height: 150px;
+    }
+
+    .form-heading {
+        position: static;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .update-container {
+        padding: 10px;
+    }
+
+    .edit-post-details, .update-post-container {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .posts-list {
+        margin-top: 20px;
+    }
+
+    .post-item {
+        padding: 8px;
+        margin: 8px 0;
+    }
+
+    .post-title {
+        font-size: 14px;
+    }
+
+    .edit-button {
+        padding: 8px 16px;
+    }
+
+    .update-post-container {
+        padding: 10px;
+    }
+
+    .textarea-field {
+        height: 100px;
+    }
+
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    .label {
+        font-size: 0.9rem; 
     }
 }

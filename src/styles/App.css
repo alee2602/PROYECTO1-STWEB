@@ -40,7 +40,7 @@ nav {
 }
 
 /* Nav Links */
-nav a {
+nav a, span {
   color: #FFFFFF;
   text-decoration: none;
   padding: 5px 15px;
@@ -183,31 +183,97 @@ padding: 50px;
 color: #000000;
 }
 
+@media (max-width: 992px) {
+  .container {
+      grid-template-columns: 1fr 1fr; /* Cambia a dos columnas */
+  }
+
+  .header-content, .footer, .loading, .error {
+      font-size: 28px;
+  }
+
+  .logo {
+      width: 80px;
+  }
+
+  .post {
+      margin: 10px;
+      padding: 15px;
+  }
+
+  .postImage {
+      max-height: 160px;
+  }
+}
+
 /* Media queries para adaptar estilos en dispositivos móviles */
 @media (max-width: 768px) {
-.container { /* Una sola columna */
-  grid-template-columns: 1fr;
+  .container { /* Una sola columna */
+    grid-template-columns: 1fr;
+    grid-gap: 10px;  
+  }
+
+  .header-content{ /* Distribuir el contenido del header en todo el espacio */
+    justify-content: space-between; 
+  }
+
+  .logo{ /* Ajustar el ancho del logo */
+    width: 100px;
+  }
+
+  header, nav, .footer, .header-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 5px 10px;
+  }
+
+  header, .footer, .loading, .error { /* Cambiar el tamaño del font para estos elementos */
+    font-size: 24px;
+  }
+
+  .header-content, .post { /* Ajustar los márgenes y el padding */
+    margin: 5px;
+    padding: 10px;
+  }
+
+  .nav-link, .nav-link .fa-icon {
+    margin: 5px 0;  
+  }
+
+  .vertical-line { 
+    display: none;  
+  }
+
+  .post {
+    flex-direction: column;
+    margin: 10px 5px;  
+  }
+
+  .postImageContainer, .postImage {
+    max-width: 100%; 
+    height: auto;  
+  }
+
+  .postContent, .timeStamp, .postTitle {
+    padding: 5px; 
+    font-size: 0.8rem;  
+  }
 }
 
-.header-content{ /* Distribuir el contenido del header en todo el espacio */
-  justify-content: space-between; 
-}
+@media (max-width: 480px) {
+  .header-content, .footer, .loading, .error {
+      font-size: 24px;
+  }
 
-.logo{ /* Ajustar el ancho del logo */
-  width: 100px;
-}
+  .postImage {
+      max-height: 120px;
+  }
 
-header, .footer, .loading, .error { /* Cambiar el tamaño del font para estos elementos */
-  font-size: 24px;
-}
+  .postTitle {
+      font-size: 1.2em; 
+  }
 
-.header-content, .post { /* Ajustar los márgenes y el padding */
-  margin: 5px;
-  padding: 10px;
-}
-
-.postImage { /* Cambiar la altura máxima de las imágenes de cada post */
-  max-height: 180px;
-  margin-top: 20px;
-}
+  .postContent {
+      font-size: 14px; 
+  }
 }
