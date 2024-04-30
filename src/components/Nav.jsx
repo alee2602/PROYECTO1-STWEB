@@ -17,12 +17,12 @@ const Nav = () => {
 
     return (
         <nav>
-            <a href="#/" onClick={() => navigate('/')} className="nav-link">  <FontAwesomeIcon icon={faHouseChimney} className="fa-icon" /> INICIO </a>
+            <a href="#/" onClick={() => navigate('/')} className="nav-link">  <FontAwesomeIcon icon={faHouseChimney} className="fa-icon" /> HOME </a>
                     
             {
                 isLoggedIn ? (
                     <>
-                        <a href="#/admin" onClick={() => navigate('/admin')} className="nav-link"> <FontAwesomeIcon icon={faGripVertical} className="fa-icon" /> BLOG DASHBOARD</a> 
+                        <a href="#/admin" onClick={() => navigate('/admin')} className="nav-link"> <FontAwesomeIcon icon={faGripVertical} className="fa-icon" /> BLOG CRUD DASHBOARD</a> 
                         <a href="#/logout" onClick={() => navigate('/logout')} className="nav-link"> <FontAwesomeIcon icon={faRightFromBracket} className="fa-icon"/> LOGOUT</a>
                     </>
                 ) : (

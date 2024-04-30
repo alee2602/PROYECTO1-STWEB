@@ -42,7 +42,7 @@ function AddPost() {
             console.log(data); 
 
             navigate('/'); 
-            window.location.replace('#/admin');
+            window.location.replace('#/');
             return true; 
         } catch (error) {
             console.error('Error:', error);
@@ -59,14 +59,14 @@ function AddPost() {
         <div className="add-post-container">
             <h2>Add Post</h2>
             <form onSubmit={handleSubmit}>
-                <input name="title" type="text" placeholder="Título" value={postData.title} onChange={handleChange} />
-                <input name="category" type="text" placeholder="Categoría" value={postData.category} onChange={handleChange} />
-                <input name="winner_name" type="text" placeholder="Nombre del Ganador" value={postData.winner_name} onChange={handleChange} />
-                <input name="song_album_name" type="text" placeholder="Nombre del Álbum" value={postData.song_album_name} onChange={handleChange} />
-                <input name="record_label" type="text" placeholder="Discográfica" value={postData.record_label} onChange={handleChange} />
-                <input name="award_date" type="date" placeholder="Fecha de Premiación" value={postData.award_date} onChange={handleChange} />
-                <input name="image_url" type="text" placeholder="URL de la Imagen" value={postData.image_url} onChange={handleChange} />
-                <textarea name="content" placeholder="Contenido" value={postData.content} onChange={handleChange} />
+                <input name="title" type="text" placeholder="Title" value={postData.title} onChange={handleChange} />
+                <input name="category" type="text" placeholder="Category" value={postData.category} onChange={handleChange} />
+                <input name="winner_name" type="text" placeholder="Winner's Name" value={postData.winner_name} onChange={handleChange} />
+                <input name="song_album_name" type="text" placeholder="Album's Name" value={postData.song_album_name} onChange={handleChange} />
+                <input name="record_label" type="text" placeholder="Record Label" value={postData.record_label} onChange={handleChange} />
+                <input name="award_date" type="date" placeholder="Award Date" value={postData.award_date} onChange={handleChange} />
+                <input name="image_url" type="text" placeholder="Image Url" value={postData.image_url} onChange={handleChange} />
+                <textarea name="content" placeholder="Content" value={postData.content} onChange={handleChange} />
                 <button type="submit">Add</button>
             </form>
         </div>

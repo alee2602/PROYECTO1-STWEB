@@ -4,11 +4,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMusic, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 function Post({ post }) {
+    const awardDate = new Date(post.award_date);
+    const formattedAwardDate = awardDate.getTime() ? awardDate.toLocaleDateString() : "Invalid Date";
+    const createdAt = new Date(post.created_at);
+    const formattedCreatedAt = createdAt.getTime() ? createdAt.toLocaleDateString() : "Invalid Date";
+
     return (
         <div className="post">
             <div className="postImageContainer">
                 <img src={post.image_url} alt={post.song_album_name} className="postImage" />
-                <div className="timeStamp">{new Date(post.created_at).toLocaleString()}</div>
+                <div className="timeStamp">Published: {formattedCreatedAt}</div>
             </div>
             <div className="postContent">
                 <h2 className="postTitle">{post.title}</h2>
@@ -19,7 +24,7 @@ function Post({ post }) {
                 </p>
                 <p>
                     <FontAwesomeIcon icon={faCalendarAlt} />
-                    <strong> Award Date:</strong> {new Date(post.award_date).toLocaleDateString()}
+                    <strong> Award Date:</strong> {formattedAwardDate}
                 </p>
             </div>
         </div>

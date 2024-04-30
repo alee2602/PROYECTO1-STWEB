@@ -1,5 +1,4 @@
 import React from 'react';
-import AddPost from '@pages/AddPost'; 
 import '@styles/Admin.css';
 import NavCrud from '@components/NavCrud';
 
