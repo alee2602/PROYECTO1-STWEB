@@ -18,6 +18,10 @@ const NavCrud = () => {
             <FontAwesomeIcon icon={faPlus} className="fa-icon" />
                 <h3>Add New Post</h3>
             </div>
+            <div className="card" onClick={(e) => handleCardClick('/post-details', e)}>
+            <FontAwesomeIcon icon={faPlus} className="fa-icon" />
+                <h3>See Individual Posts</h3>
+            </div>
             <div className="card" onClick={(e) => handleCardClick('/update-post', e)}>
             <FontAwesomeIcon icon={faPenToSquare} className="fa-icon"  />
                 <h3>Update Post</h3>
