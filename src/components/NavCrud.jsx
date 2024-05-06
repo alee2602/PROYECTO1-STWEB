@@ -2,7 +2,7 @@ import React from 'react';
 import '@styles/Admin.css';
 import useNavigate from '@hooks/useNavigate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faPenToSquare, faTrashCan } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faPenToSquare, faTrashCan, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 const NavCrud = () => {
     const { navigate } = useNavigate();
@@ -19,7 +19,7 @@ const NavCrud = () => {
                 <h3>Add New Post</h3>
             </div>
             <div className="card" onClick={(e) => handleCardClick('/post-details', e)}>
-            <FontAwesomeIcon icon={faPlus} className="fa-icon" />
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="fa-icon" />
                 <h3>See Individual Posts</h3>
             </div>
             <div className="card" onClick={(e) => handleCardClick('/update-post', e)}>

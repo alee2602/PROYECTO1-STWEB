@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Post from '../components/Post'; 
-import LoadingComponent from '../components/LoadingComponent'
+import Post from '@components/Post'; 
+import LoadingComponent from '@components/LoadingComponent'
 
 function Home() {
     const [posts, setPosts] = useState([]);

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import useNavigate from '../hooks/useNavigate';
-import useToken from '../hooks/useToken';
+import useNavigate from '@hooks/useNavigate';
+import useToken from '@hooks/useToken';
 
 function Logout() {
     const { navigate } = useNavigate();

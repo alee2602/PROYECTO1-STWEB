@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import useNavigate from '@hooks/useNavigate';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import '@styles/PostDetails.css'; 
 import { fetchWithAuth } from '@utils/api.js';
 

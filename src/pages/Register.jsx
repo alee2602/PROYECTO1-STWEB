@@ -1,6 +1,6 @@
 
 import CryptoJS from 'crypto-js';
-import useNavigate from '../hooks/useNavigate';
+import useNavigate from '@hooks/useNavigate';
 import useForm from '@hooks/useForm' 
 import '@styles/Register.css'; 
 import { validateRegister } from '@utils/validation.js' 

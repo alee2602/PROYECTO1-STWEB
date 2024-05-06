@@ -1,7 +1,7 @@
 
 import CryptoJS from 'crypto-js';
-import useNavigate from '../hooks/useNavigate'
-import useToken  from '../hooks/useToken'
+import useNavigate from '@hooks/useNavigate'
+import useToken  from '@hooks/useToken'
 import '@styles/Login.css'
 import useForm from '@hooks/useForm' 
 import { validateLogin } from '@utils/validation.js'  
