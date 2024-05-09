@@ -10,7 +10,7 @@ function Home() {
 
     async function fetchPosts() {
         try{
-            const response = await fetch('http://localhost:22249/posts');
+            const response = await fetch('http://22249.arpanetos.lol/posts');
             if (!response.ok){
                 throw new Error(`Error! status: ${response.status}`);
             }

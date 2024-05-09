@@ -10,7 +10,7 @@ function PostDetails() {
     useEffect(() => {
         const fetchAllPosts = async () => {
             try {
-                const response = await fetch('http://localhost:22249/posts');
+                const response = await fetch('http://22249.arpanetos.lol/posts');
                 const data = await response.json();
                 setPosts(data);
             } catch (error) {

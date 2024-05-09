@@ -18,7 +18,7 @@ function Register() {
 
 
     const register = async () => {
-    const response = await fetch("http://localhost:22249/register", {
+    const response = await fetch("http://22249.arpanetos.lol/register", {
     method: 'POST',
     headers: {
         'Content-Type': 'application/json'

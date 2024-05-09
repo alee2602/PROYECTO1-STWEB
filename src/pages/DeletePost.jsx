@@ -11,7 +11,7 @@ function DeletePost() {
     useEffect(() => {
         const fetchPosts = async () => {
             try {
-                const response = await fetch('http://localhost:22249/posts');
+                const response = await fetch('http://22249.arpanetos.lol/posts');
                 const data = await response.json();
                 setPosts(data);
             } catch (error) {
@@ -26,7 +26,7 @@ function DeletePost() {
 
         if (window.confirm("Are you sure you want to delete this post?")) {
             try {
-                const response = await fetchWithAuth(`http://localhost:22249/posts/${postId}`, 'DELETE')
+                const response = await fetchWithAuth(`http://22249.arpanetos.lol/posts/${postId}`, 'DELETE')
 
                 setPosts(posts.filter(post => post.id !== postId));
                 alert('Post has been deleted successfully ! ');

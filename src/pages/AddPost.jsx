@@ -27,7 +27,7 @@ function AddPost() {
 
     const handleAddPost = async () => {
         try {
-            const response = await fetchWithAuth('http://localhost:22249/posts', 'POST', postData) 
+            const response = await fetchWithAuth('http://22249.arpanetos.lol/posts', 'POST', postData) 
 
             alert('Post has been added succefully! ');
             navigate('/'); 

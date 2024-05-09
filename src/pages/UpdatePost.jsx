@@ -12,7 +12,7 @@ function UpdatePost() {
 
     useEffect(() => {
         const fetchAllPosts = async () => {
-            const response = await fetch('http://localhost:22249/posts');
+            const response = await fetch('http://22249.arpanetos.lol/posts');
             const data = await response.json();
             setPosts(data);
         };
@@ -60,7 +60,7 @@ function UpdatePostForm({ postId, onPostUpdated, isActive }) {
 
     useEffect(() => {
         const fetchPostData = async () => {
-            const response = await fetch(`http://localhost:22249/posts/${postId}`);
+            const response = await fetch(`http://22249.arpanetos.lol/posts/${postId}`);
             const data = await response.json();
             setPostData(data);
         };
@@ -89,7 +89,7 @@ function UpdatePostForm({ postId, onPostUpdated, isActive }) {
         };
 
         try {
-            const response = await fetchWithAuth(`http://localhost:22249/posts/${postId}`, 'PUT', updatedPostData)
+            const response = await fetchWithAuth(`http://22249.arpanetos.lol/posts/${postId}`, 'PUT', updatedPostData)
 
             onPostUpdated()
             alert('Post has been updated successfully ! ');
