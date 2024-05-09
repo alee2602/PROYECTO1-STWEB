@@ -16,7 +16,9 @@ This project was built using a variety of technologies and tools that make it po
 - **[Vite](https://vitejs.dev/)** - A modern frontend build tool that significantly improves the development experience.
 - **[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)** - The programming language used.
 - **[React](https://reactjs.org/)** - A JavaScript library for building user interfaces. This project utilizes several features of React:
-  - useForm - For managing component lifecycle and state of login and register forms, as well as adding user validations.
+  - useForm - This custom hook manages the lifecycle and state of login and register forms, and validates user input.
+  - useToken - Responsible for for retrieving, storing, and updating the JWT (JSON Web Token) in localStorage.
+  - useNavigate - This hook wraps the navigation logic of the Router, allowing components to redirect users to different routes
 - **[CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)** - For styling the application.
 - **[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)** - Used to structure the content for all pages.
 
